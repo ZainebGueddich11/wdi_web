@@ -1,5 +1,6 @@
+{#
 {% extends 'base.html.twig' %}
-
+{% block body %}
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
@@ -24,7 +25,7 @@
            value="{{ csrf_token('authenticate') }}"
     >
 
-    {#
+
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
         See https://symfony.com/doc/current/security/remember_me.html
 
@@ -33,10 +34,229 @@
                 <input type="checkbox" name="_remember_me"> Remember me
             </label>
         </div>
-    #}
+
 
     <button class="btn btn-lg btn-primary" type="submit">
         Sign in
     </button>
 </form>
+{% endblock %}
+<head>
+<style>
+    body {
+        background-color: #f45b69;
+        font-family: "Asap", sans-serif;
+    }
+
+    .login {
+        overflow: hidden;
+        background-color: white;
+        padding: 40px 30px 30px 30px;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: -webkit-transform 300ms, box-shadow 300ms;
+        -moz-transition: -moz-transform 300ms, box-shadow 300ms;
+        transition: transform 300ms, box-shadow 300ms;
+        box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2);
+    }
+    .login::before, .login::after {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-top-left-radius: 40%;
+        border-top-right-radius: 45%;
+        border-bottom-left-radius: 35%;
+        border-bottom-right-radius: 40%;
+        z-index: -1;
+    }
+    .login::before {
+        left: 40%;
+        bottom: -130%;
+        background-color: rgba(69, 105, 144, 0.15);
+        -webkit-animation: wawes 6s infinite linear;
+        -moz-animation: wawes 6s infinite linear;
+        animation: wawes 6s infinite linear;
+    }
+    .login::after {
+        left: 35%;
+        bottom: -125%;
+        background-color: rgba(2, 128, 144, 0.2);
+        -webkit-animation: wawes 7s infinite;
+        -moz-animation: wawes 7s infinite;
+        animation: wawes 7s infinite;
+    }
+    .login > input {
+        font-family: "Asap", sans-serif;
+        display: block;
+        border-radius: 5px;
+        font-size: 16px;
+        background: white;
+        width: 100%;
+        border: 0;
+        padding: 10px 10px;
+        margin: 15px -10px;
+    }
+    .login > button {
+        font-family: "Asap", sans-serif;
+        cursor: pointer;
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        width: 80px;
+        border: 0;
+        padding: 10px 0;
+        margin-top: 10px;
+        margin-left: -5px;
+        border-radius: 5px;
+        background-color: #f45b69;
+        -webkit-transition: background-color 300ms;
+        -moz-transition: background-color 300ms;
+        transition: background-color 300ms;
+    }
+    .login > button:hover {
+        background-color: #f24353;
+    }
+
+    @-webkit-keyframes wawes {
+        from {
+            -webkit-transform: rotate(0);
+        }
+        to {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+    @-moz-keyframes wawes {
+        from {
+            -moz-transform: rotate(0);
+        }
+        to {
+            -moz-transform: rotate(360deg);
+        }
+    }
+    @keyframes wawes {
+        from {
+            -webkit-transform: rotate(0);
+            -moz-transform: rotate(0);
+            -ms-transform: rotate(0);
+            -o-transform: rotate(0);
+            transform: rotate(0);
+        }
+        to {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.6);
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        font-size: 12px;
+    }
+</style>
+</head>
+<body>
+<form class="login" method="post">
+    {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+       {% endif %}
+    <label for="inputEmail">Email</label>
+    <input type="text" placeholder="Username" autocomplete="email" name="email" id="inputEmail"  value="{{ last_username }}">
+    <label for="inputPassword">Password</label>
+    <input type="password" placeholder="Password" autocomplete="current-password" name="password" id="inputPassword" required>
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+    <button type="submit">Login</button>
+</form>
+
+<a href="https://codepen.io/davinci/" target="_blank">check my other pens</a>
+</body>
+{% endblock %}
+#}
+
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block body %}
+    <body class="">
+    <div class="container position-sticky z-index-sticky top-0">
+        <div class="row">
+            <div class="col-12">
+
+            </div>
+        </div>
+    </div>
+    <main class="main-content mt-0 ps">
+        <section>
+            <div class="page-header min-vh-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
+                            <div class="card card-plain">
+                                <div class="card-header pb-0 text-start">
+                                    <h4 class="font-weight-bolder">Sign In</h4>
+                                    <p class="mb-0">Enter your email and password to sign in</p>
+                                </div>
+                                <div class="card-body">
+                                    <form role="form" method="post">
+                                        <div class="mb-3">
+                                            {% if error %}
+                                                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                                            {% endif %}
+                                            <label for="inputEmail">Email</label>
+                                            <input type="email" class="form-control form-control-lg"  placeholder="Username" autocomplete="email" name="email" id="inputEmail"  value="{{ last_username }}" aria-label="Email">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="inputPassword">Email</label>
+                                            <input type="password" class="form-control form-control-lg" type="password" placeholder="Password" autocomplete="current-password" name="password" id="inputPassword" required aria-label="Password">
+                                        </div>
+                                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                                        </div>
+                                        <div class="text-center">
+                                            <button  type="submit" class="btn btn-lg btn-lg w-100 mt-4 mb-0" style="color : #ffffff ;background-color: #111b52 !important;">Sign in</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                                    <p class="mb-4 text-sm mx-auto">
+                                        Don't have an account?
+                                        <a href="javascript:;" class="text-primary text-gradient font-weight-bold">Sign up</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
+                            <div class="position-relative  h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url({{ asset('assets1/img/imgSignIn.jpg') }} );
+          background-size: cover;">
+                             {#   <span class="mask bg-gradient-primary opacity-6"></span>
+                                <h4 class="mt-5 text-white font-weight-bolder position-relative">"Attention is the new currency"</h4>
+                                <p class="text-white position-relative">The more effortless the writing looks,
+                                    the more effort the writer actually put into the process.</p>#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></main>
+
+
+    </body>
 {% endblock %}

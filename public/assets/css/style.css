@@ -323,12 +323,7 @@ button {
      height: 87px;
      background:#ed242e;
 }
-
-
 .logo_sm {display: none;}
-
-
-
 .logo_midle {color: #fef6fc; font-weight: bold; color: #fff !important;}
 .logo_midle::before {
     position: absolute;
@@ -336,11 +331,12 @@ button {
     bottom: -93px;
     width: 158px;
     height: 96px;
-    background: url(../images/logo.png);
+    background: url(../images/logoChtarbChtar.png);
     z-index: 999;
     margin: 0 auto;
     left: 0;
     right: 26px;
+    background-repeat: no-repeat;
 }
 .site-navbar {
     display: flex;

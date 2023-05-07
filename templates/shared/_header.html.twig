@@ -1,17 +1,21 @@
+{#{%   if is_granted('IS_AUTHENTICATED_REMEMBERED') %}#}
 <header class="header-area">
-    <div class="left">
-        <a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a>
-    </div>
 
+    {%   if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
         <div class="right">
-            <a class="btn dropdown-toggle" href="#" role="button"
-               id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false><i class="fa fa-user " ></i>
-
+            <a  href="{{ path('app_logout') }}" role="button" style="color: white"
+                >log out
             </a>
-
-
         </div>
+        {% else  %}
+            <div class="right">
+                <a  href="{{ path('app_login') }}" role="button"
+                >
+                                    <i class="fa fa-user fa-lg"   aria-hidden="true"></i>
 
+                </a>
+            </div>
+{% endif %}
     <div class="container">
         <div class="row d_flex">
             <div class="col-sm-3 logo_sm">
@@ -26,18 +30,21 @@
                             <li><a class="active" href="index.html">Home</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="action.html">take action</a></li>
-                            <li><a href="index.html" class="logo_midle">covido</a></li>
+{#                            <li><a href="index.html" class="logo_midle">WDI</a></li>#}
                             <li><a href="news.html">news</a></li>
                             <li><a href="doctores.html">doctores</a></li>
 
                             <li><a href="contact.html">Contact </a></li>
+{#                            <li><a href="index.html" class="logo_midle">covido</a></li>#}
                         </ul>
                         <button class="nav-toggler">
                             <span></span>
                         </button>
+
                     </nav>
                 </div>
             </div>
         </div>
     </div>
 </header>
+{#{% endif %}#}
