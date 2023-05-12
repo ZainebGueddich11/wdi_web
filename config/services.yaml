@@ -6,6 +6,9 @@
 parameters:
 
 services:
+    App\Service\FlaskIntegrationService:
+        arguments:
+            $flaskEndpoint: 'http://127.0.0.1:5000'  # Replace with your Flask endpoint URL
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.

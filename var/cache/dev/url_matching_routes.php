@@ -10,6 +10,11 @@ return [
     [ // $staticRoutes
         '/dashboard' => [[['_route' => 'app_dashboard', '_controller' => 'App\\Controller\\DashboardController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'app_index', '_controller' => 'App\\Controller\\IndexController::index'], null, null, null, false, false, null]],
+        '/prediction' => [[['_route' => 'app_prediction', '_controller' => 'App\\Controller\\PredictionController::index'], null, null, null, false, false, null]],
+        '/predict' => [
+            [['_route' => 'prediction', '_controller' => 'App\\Controller\\PredictionController::index1'], null, ['GET' => 0, 'POST' => 1], null, false, false, null],
+            [['_route' => 'predict', '_controller' => 'App\\Controller\\PredictionController::predict'], null, null, null, false, false, null],
+        ],
         '/profile' => [[['_route' => 'app_profile', '_controller' => 'App\\Controller\\ProfileController::index'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],

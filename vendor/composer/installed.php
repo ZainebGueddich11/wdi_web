@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
-        'reference' => '19dd1985c459bd66223ed3e624f27ce8e93c2c74',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '8ad8a8bf04b44f1cbf7af653f956cf244e06c05f',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
-            'reference' => '19dd1985c459bd66223ed3e624f27ce8e93c2c74',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '8ad8a8bf04b44f1cbf7af653f956cf244e06c05f',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -137,9 +137,9 @@
             'dev_requirement' => false,
         ),
         'doctrine/orm' => array(
-            'pretty_version' => '2.14.3',
-            'version' => '2.14.3.0',
-            'reference' => 'a64f315dfeae5e50b17f132626fd9e9b4ec8985d',
+            'pretty_version' => '2.15.1',
+            'version' => '2.15.1.0',
+            'reference' => '9bc6f5b4ac6f1e7d4248b2efbd01a748782075bc',
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/orm',
             'aliases' => array(),
@@ -196,6 +196,18 @@
                 0 => '^2.1',
             ),
         ),
+        'php-http/async-client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
+            ),
+        ),
+        'php-http/client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
+            ),
+        ),
         'psr/cache' => array(
             'pretty_version' => '1.0.1',
             'version' => '1.0.1.0',
@@ -236,6 +248,12 @@
             'dev_requirement' => false,
         ),
         'psr/event-dispatcher-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
+        'psr/http-client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0',
@@ -445,6 +463,30 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'symfony/http-client' => array(
+            'pretty_version' => 'v5.4.23',
+            'version' => '5.4.23.0',
+            'reference' => '617c98e46b54e43ca76945a908b1749bb82f4478',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/http-client',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/http-client-contracts' => array(
+            'pretty_version' => 'v2.5.2',
+            'version' => '2.5.2.0',
+            'reference' => 'ba6a9f0e8f3edd190520ee3b9a958596b6ca2e70',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/http-client-contracts',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/http-client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '2.4',
+            ),
+        ),
         'symfony/http-foundation' => array(
             'pretty_version' => 'v5.4.23',
             'version' => '5.4.23.0',
@@ -568,6 +610,15 @@
             'reference' => '707403074c8ea6e2edaf8794b0157a0bfa52157a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-php81',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'symfony/process' => array(
+            'pretty_version' => 'v5.4.23',
+            'version' => '5.4.23.0',
+            'reference' => '4b842fc4b61609e0a155a114082bd94e31e98287',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/process',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -749,18 +800,18 @@
             'dev_requirement' => false,
         ),
         'twig/extra-bundle' => array(
-            'pretty_version' => 'v3.5.1',
-            'version' => '3.5.1.0',
-            'reference' => 'a961e553a624eebdbd423ad5ab931497ca6d87cd',
+            'pretty_version' => 'v3.6.0',
+            'version' => '3.6.0.0',
+            'reference' => '4a9674e775f49a9df5e26da66546e8f3364afe67',
             'type' => 'symfony-bundle',
             'install_path' => __DIR__ . '/../twig/extra-bundle',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'twig/twig' => array(
-            'pretty_version' => 'v3.5.1',
-            'version' => '3.5.1.0',
-            'reference' => 'a6e0510cc793912b451fd40ab983a1d28f611c15',
+            'pretty_version' => 'v3.6.0',
+            'version' => '3.6.0.0',
+            'reference' => '106c170d08e8415d78be2d16c3d057d0d108262b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../twig/twig',
             'aliases' => array(),
