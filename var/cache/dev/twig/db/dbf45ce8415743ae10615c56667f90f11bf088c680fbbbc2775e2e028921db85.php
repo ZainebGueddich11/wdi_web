@@ -79,13 +79,15 @@ class __TwigTemplate_7f8a16c9a89c3377b95b867151202357cd36bb89d5e0b0ccded74481d84
         echo "        <!-- End Navbar -->
         <div class=\"container-fluid py-4 rounded\" >
 
-          <iframe title=\"Report Section\"  width=\"100%\" height=\"870\" src=\"https://app.powerbi.com/view?r=eyJrIjoiMGVlOTY0ZDctMTJkNC00MDA3LWI0ZmEtZmNmMjVkNmI5MjE5IiwidCI6ImEyZDgzMzZlLWEyOTktNGQ1Mi04NjM2LWI3ZWY4YzExN2ExZCIsImMiOjh9&pageName=ReportSection\"  allowFullScreen=\"true\"></iframe>
-            </div>
+";
+        // line 15
+        echo "            <iframe title=\"Report Section\" width=\"100%\" height=\"870\" src=\"https://app.powerbi.com/view?r=eyJrIjoiMTdhMWQ5MTctMDU3Yy00YTM4LTk1N2EtMjY0YjY0NWViMTc1IiwidCI6ImEyZDgzMzZlLWEyOTktNGQ1Mi04NjM2LWI3ZWY4YzExN2ExZCIsImMiOjh9&pageName=ReportSection\" frameborder=\"0\" allowFullScreen=\"true\"></iframe>
+        </div>
 
         ";
-        // line 16
-        $this->loadTemplate("shared/_footerAdmin.html.twig", "dashboard/index.html.twig", 16)->display($context);
-        // line 17
+        // line 18
+        $this->loadTemplate("shared/_footerAdmin.html.twig", "dashboard/index.html.twig", 18)->display($context);
+        // line 19
         echo "    </main>
 
       <div class=\"fixed-plugin\">
@@ -281,7 +283,7 @@ class __TwigTemplate_7f8a16c9a89c3377b95b867151202357cd36bb89d5e0b0ccded74481d84
 
     public function getDebugInfo()
     {
-        return array (  89 => 17,  87 => 16,  79 => 10,  77 => 9,  73 => 7,  66 => 6,  53 => 4,  36 => 2,);
+        return array (  91 => 19,  89 => 18,  84 => 15,  79 => 10,  77 => 9,  73 => 7,  66 => 6,  53 => 4,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -298,8 +300,10 @@ class __TwigTemplate_7f8a16c9a89c3377b95b867151202357cd36bb89d5e0b0ccded74481d84
         <!-- End Navbar -->
         <div class=\"container-fluid py-4 rounded\" >
 
-          <iframe title=\"Report Section\"  width=\"100%\" height=\"870\" src=\"https://app.powerbi.com/view?r=eyJrIjoiMGVlOTY0ZDctMTJkNC00MDA3LWI0ZmEtZmNmMjVkNmI5MjE5IiwidCI6ImEyZDgzMzZlLWEyOTktNGQ1Mi04NjM2LWI3ZWY4YzExN2ExZCIsImMiOjh9&pageName=ReportSection\"  allowFullScreen=\"true\"></iframe>
-            </div>
+{#          <iframe title=\"Report Section\"  width=\"100%\" height=\"870\" src=\"https://app.powerbi.com/view?r=eyJrIjoiMGVlOTY0ZDctMTJkNC00MDA3LWI0ZmEtZmNmMjVkNmI5MjE5IiwidCI6ImEyZDgzMzZlLWEyOTktNGQ1Mi04NjM2LWI3ZWY4YzExN2ExZCIsImMiOjh9&pageName=ReportSection\"  allowFullScreen=\"true\"></iframe>#}
+{#            <iframe title=\"Report Section\" width=\"100%\" height=\"870\" src=\"https://app.powerbi.com/view?r=eyJrIjoiN2RlODlmZTEtNjlmNS00NWI2LTkyZWQtNDFkZjU4YzRhODA3IiwidCI6ImEyZDgzMzZlLWEyOTktNGQ1Mi04NjM2LWI3ZWY4YzExN2ExZCIsImMiOjh9&pageName=ReportSection\" frameborder=\"0\" allowFullScreen=\"true\"></iframe>#}
+            <iframe title=\"Report Section\" width=\"100%\" height=\"870\" src=\"https://app.powerbi.com/view?r=eyJrIjoiMTdhMWQ5MTctMDU3Yy00YTM4LTk1N2EtMjY0YjY0NWViMTc1IiwidCI6ImEyZDgzMzZlLWEyOTktNGQ1Mi04NjM2LWI3ZWY4YzExN2ExZCIsImMiOjh9&pageName=ReportSection\" frameborder=\"0\" allowFullScreen=\"true\"></iframe>
+        </div>
 
         {% include 'shared/_footerAdmin.html.twig' %}
     </main>

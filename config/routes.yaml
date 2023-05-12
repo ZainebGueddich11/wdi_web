@@ -4,3 +4,7 @@
 predict:
   path: /predict
   controller: App\Controller\PredictionController::predict
+
+index2:
+  path: /predictEnvironement
+  controller: App\Controller\PredictionController::index2

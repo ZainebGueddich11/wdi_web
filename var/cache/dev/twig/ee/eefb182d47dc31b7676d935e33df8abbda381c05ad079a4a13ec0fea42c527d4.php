@@ -81,34 +81,33 @@ class __TwigTemplate_dbadff4ca6c4a5176ced807931e64bac1e1266d5fa3a2f5511f5ab5d489
                 <div class=\"row gx-4\">
                     <div class=\"col-auto\">
                         <div class=\"avatar avatar-xl position-relative\">
-                            <img src=\"../assets/img/team-1.jpg\" alt=\"profile_image\" class=\"w-100 border-radius-lg shadow-sm\">
                         </div>
                     </div>
                     <div class=\"col-auto my-auto\">
                         <div class=\"h-100\">
                             <h5 class=\"mb-1\">
                                 ";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20), "email", [], "any", false, false, false, 20), "html", null, true);
+        // line 19
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "user", [], "any", false, false, false, 19), "email", [], "any", false, false, false, 19), "html", null, true);
         echo "
                             </h5>
                             <p class=\"mb-0 font-weight-bold text-sm\">
 
                                 ";
+        // line 23
+        $context["role"] = twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23), "roles", [], "any", false, false, false, 23), 0, [], "array", false, false, false, 23);
         // line 24
-        $context["role"] = twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "user", [], "any", false, false, false, 24), "roles", [], "any", false, false, false, 24), 0, [], "array", false, false, false, 24);
-        // line 25
         echo "                                ";
-        if ((0 === twig_compare((isset($context["role"]) || array_key_exists("role", $context) ? $context["role"] : (function () { throw new RuntimeError('Variable "role" does not exist.', 25, $this->source); })()), "ROLE_USER"))) {
-            // line 26
+        if ((0 === twig_compare((isset($context["role"]) || array_key_exists("role", $context) ? $context["role"] : (function () { throw new RuntimeError('Variable "role" does not exist.', 24, $this->source); })()), "ROLE_USER"))) {
+            // line 25
             echo "                                    Role User
                                 ";
         } else {
-            // line 28
+            // line 27
             echo "                                    Role Admin
                                 ";
         }
-        // line 30
+        // line 29
         echo "                            </p>
                         </div>
                     </div>
@@ -154,44 +153,42 @@ class __TwigTemplate_dbadff4ca6c4a5176ced807931e64bac1e1266d5fa3a2f5511f5ab5d489
                             <h1>Prediction Result</h1>
 
 ";
-        // line 75
+        // line 74
         echo "                                <ul>
                                   ";
-        // line 76
+        // line 75
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["predictions"]) || array_key_exists("predictions", $context) ? $context["predictions"] : (function () { throw new RuntimeError('Variable "predictions" does not exist.', 76, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["predictions"]) || array_key_exists("predictions", $context) ? $context["predictions"] : (function () { throw new RuntimeError('Variable "predictions" does not exist.', 75, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["prediction"]) {
-            // line 77
+            // line 76
             echo "                                      ";
             $context["p"] = $context["prediction"];
-            // line 78
+            // line 77
             echo "                                      ";
-            if ((0 === twig_compare((isset($context["p"]) || array_key_exists("p", $context) ? $context["p"] : (function () { throw new RuntimeError('Variable "p" does not exist.', 78, $this->source); })()), 0))) {
-                // line 79
-                echo "                                        <li>low </li>
-                                          ";
-            } elseif ((0 === twig_compare(            // line 80
-(isset($context["p"]) || array_key_exists("p", $context) ? $context["p"] : (function () { throw new RuntimeError('Variable "p" does not exist.', 80, $this->source); })()), 1))) {
-                // line 81
-                echo "                                              <li>mean </li>
-                                              ";
+            if ((0 === twig_compare((isset($context["p"]) || array_key_exists("p", $context) ? $context["p"] : (function () { throw new RuntimeError('Variable "p" does not exist.', 77, $this->source); })()), 0))) {
+                // line 78
+                echo "                                          <li style=\"color:green \">low </li>
+                                      ";
+            } elseif ((0 === twig_compare(            // line 79
+(isset($context["p"]) || array_key_exists("p", $context) ? $context["p"] : (function () { throw new RuntimeError('Variable "p" does not exist.', 79, $this->source); })()), 1))) {
+                // line 80
+                echo "                                          <li  style=\"color:yellow \">mean </li>
+                                      ";
             } else {
-                // line 83
-                echo "                                                  <img src=";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets1/img/warning.png"), "html", null, true);
-                echo " alt=\"main_logo\"> attention
+                // line 82
+                echo "                                          <li  style=\"color:red \">High </li>
                                       ";
             }
-            // line 85
+            // line 84
             echo "                                   ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['prediction'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 86
+        // line 85
         echo "                                </ul>
 ";
-        // line 90
+        // line 89
         echo "                            <hr class=\"horizontal dark\">
 
 
@@ -203,9 +200,9 @@ class __TwigTemplate_dbadff4ca6c4a5176ced807931e64bac1e1266d5fa3a2f5511f5ab5d489
 
         </div>
         ";
+        // line 99
+        $this->loadTemplate("shared/_footerAdmin.html.twig", "prediction/result.html.twig", 99)->display($context);
         // line 100
-        $this->loadTemplate("shared/_footerAdmin.html.twig", "prediction/result.html.twig", 100)->display($context);
-        // line 101
         echo "    </main>
 
 ";
@@ -226,7 +223,7 @@ class __TwigTemplate_dbadff4ca6c4a5176ced807931e64bac1e1266d5fa3a2f5511f5ab5d489
 
     public function getDebugInfo()
     {
-        return array (  209 => 101,  207 => 100,  195 => 90,  192 => 86,  186 => 85,  180 => 83,  176 => 81,  174 => 80,  171 => 79,  168 => 78,  165 => 77,  161 => 76,  158 => 75,  112 => 30,  108 => 28,  104 => 26,  101 => 25,  99 => 24,  92 => 20,  79 => 9,  77 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  206 => 100,  204 => 99,  192 => 89,  189 => 85,  183 => 84,  179 => 82,  175 => 80,  173 => 79,  170 => 78,  167 => 77,  164 => 76,  160 => 75,  157 => 74,  111 => 29,  107 => 27,  103 => 25,  100 => 24,  98 => 23,  91 => 19,  79 => 9,  77 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -244,7 +241,6 @@ class __TwigTemplate_dbadff4ca6c4a5176ced807931e64bac1e1266d5fa3a2f5511f5ab5d489
                 <div class=\"row gx-4\">
                     <div class=\"col-auto\">
                         <div class=\"avatar avatar-xl position-relative\">
-                            <img src=\"../assets/img/team-1.jpg\" alt=\"profile_image\" class=\"w-100 border-radius-lg shadow-sm\">
                         </div>
                     </div>
                     <div class=\"col-auto my-auto\">
@@ -309,11 +305,11 @@ class __TwigTemplate_dbadff4ca6c4a5176ced807931e64bac1e1266d5fa3a2f5511f5ab5d489
                                   {% for prediction in predictions %}
                                       {% set p=prediction %}
                                       {% if p==0 %}
-                                        <li>low </li>
-                                          {% elseif p==1 %}
-                                              <li>mean </li>
-                                              {% else %}
-                                                  <img src={{ asset('assets1/img/warning.png') }} alt=\"main_logo\"> attention
+                                          <li style=\"color:green \">low </li>
+                                      {% elseif p==1 %}
+                                          <li  style=\"color:yellow \">mean </li>
+                                      {% else %}
+                                          <li  style=\"color:red \">High </li>
                                       {% endif %}
                                    {% endfor %}
                                 </ul>

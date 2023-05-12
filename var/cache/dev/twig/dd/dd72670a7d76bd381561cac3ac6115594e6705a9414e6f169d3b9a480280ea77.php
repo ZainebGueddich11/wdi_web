@@ -81,35 +81,33 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                 <div class=\"row gx-4\">
                     <div class=\"col-auto\">
                         <div class=\"avatar avatar-xl position-relative\">
-                            <img src=\"../assets/img/team-1.jpg\" alt=\"profile_image\"
-                                 class=\"w-100 border-radius-lg shadow-sm\">
                         </div>
                     </div>
                     <div class=\"col-auto my-auto\">
                         <div class=\"h-100\">
                             <h5 class=\"mb-1\">
                                 ";
-        // line 21
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 21, $this->source); })()), "user", [], "any", false, false, false, 21), "email", [], "any", false, false, false, 21), "html", null, true);
+        // line 19
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "user", [], "any", false, false, false, 19), "email", [], "any", false, false, false, 19), "html", null, true);
         echo "
                             </h5>
                             <p class=\"mb-0 font-weight-bold text-sm\">
 
                                 ";
-        // line 25
-        $context["role"] = twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 25, $this->source); })()), "user", [], "any", false, false, false, 25), "roles", [], "any", false, false, false, 25), 0, [], "array", false, false, false, 25);
-        // line 26
+        // line 23
+        $context["role"] = twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23), "roles", [], "any", false, false, false, 23), 0, [], "array", false, false, false, 23);
+        // line 24
         echo "                                ";
-        if ((0 === twig_compare((isset($context["role"]) || array_key_exists("role", $context) ? $context["role"] : (function () { throw new RuntimeError('Variable "role" does not exist.', 26, $this->source); })()), "ROLE_USER"))) {
-            // line 27
+        if ((0 === twig_compare((isset($context["role"]) || array_key_exists("role", $context) ? $context["role"] : (function () { throw new RuntimeError('Variable "role" does not exist.', 24, $this->source); })()), "ROLE_USER"))) {
+            // line 25
             echo "                                    Role User
                                 ";
         } else {
-            // line 29
+            // line 27
             echo "                                    Role Admin
                                 ";
         }
-        // line 31
+        // line 29
         echo "                            </p>
                         </div>
                     </div>
@@ -131,27 +129,26 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                             </div>
                         </div>
                         <div class=\"card-body\">
-                            <p class=\"text-uppercase text-sm\">Prediction Form</p>
+                                <p class=\"text-uppercase text-sm\">Prediction of the impact of the COVID-19 pandemic on <strong>Environment</strong></p>
                             <div class=\"row\">
                                 <form action=\"";
-        // line 54
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prediction");
+        // line 52
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("predictEnvironement");
         echo "\" method=\"POST\">
                                     <div class=\"row\">
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
                                                 <label class=\"form-control-label\"
-                                                       for=\"Physicians2018\">Physicians </label>
-                                                <input type=\"text\" class=\"form-control\" name=\"Physicians2018\"
-                                                       id=\"Physicians2018\" required><br>
+                                                       for=\"Renewableenergyconsumptionoftotalfinalenergyconsumption2018\">Renewable energy consumption  % of total final energy consumption 2018 :</label>
+                                                <input type=\"text\" class=\"form-control\" name=\"Renewableenergyconsumptionoftotalfinalenergyconsumption2018\"
+                                                       id=\"Renewableenergyconsumptionoftotalfinalenergyconsumption2018\" required><br>
                                             </div>
                                         </div>
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
-                                                <label class=\"form-control-label\" for=\"Numberofdeaths\">Number of
-                                                    deaths:</label>
-                                                <input type=\"text\" class=\"form-control\" name=\"Numberofdeaths\"
-                                                       id=\"Numberofdeaths\" required><br>
+                                                <label class=\"form-control-label\" for=\"Renewableenergyconsumption2019\">Renewable energy consumption  2019:</label>
+                                                <input type=\"text\" class=\"form-control\" name=\"Renewableenergyconsumption2019\"
+                                                       id=\"Renewableenergyconsumption2019\" required><br>
                                             </div>
                                         </div>
                                     </div>
@@ -159,32 +156,29 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
                                                 <label class=\"form-control-label\"
-                                                       for=\"PrevalenceofHIVmale(ages15-24)2019\">Prevalence of HIV
-                                                    male</label>
+                                                       for=\"Renewableelectricityoutput2020\">Renewable electricity output 2020 :</label>
                                                 <input class=\"form-control\" type=\"text\"
-                                                       name=\"PrevalenceofHIVmale(ages15-24)2019\"
-                                                       id=\"PrevalenceofHIVmale(ages15-24)2019\" required><br>
+                                                       name=\"Renewableelectricityoutput2020\"
+                                                       id=\"Renewableelectricityoutput2020\" required><br>
                                             </div>
                                         </div>
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
                                                 <label class=\"form-control-label\"
-                                                       for=\"CausedeathbyCommunicablediseases2019\">Cause death by
-                                                    Communicable diseases</label>
+                                                       for=\"CO2Emissions(Thousandmetrictons)2019\">CO2 Emissions (Thousand metric tons) 2019 :</label>
                                                 <input class=\"form-control\" type=\"text\"
-                                                       name=\"CausedeathbyCommunicablediseases2019\"
-                                                       id=\"CausedeathbyCommunicablediseases2019\" required><br>
+                                                       name=\"CO2Emissions(Thousandmetrictons)2019\"
+                                                       id=\"CO2Emissions(Thousandmetrictons)2019\" required><br>
                                             </div>
                                         </div>
                                     </div>
                                     <div class=\"col-md-6\">
                                         <div class=\"form-group\">
                                             <label class=\"form-control-label\"
-                                                   for=\"CausedeathbynonCommunicablediseases2019\">Cause death by non
-                                                Communicable diseases</label>
+                                                   for=\"CO2Emissions(Thousandmetrictons)2020\">CO2 Emissions (Thousand metric tons) 2020 :</label>
                                             <input class=\"form-control\" type=\"text\"
-                                                   name=\"CausedeathbynonCommunicablediseases2019\"
-                                                   id=\"CausedeathbynonCommunicablediseases2019\" required><br>
+                                                   name=\"CO2Emissions(Thousandmetrictons)2020\"
+                                                   id=\"CO2Emissions(Thousandmetrictons)2020\" required><br>
                                         </div>
                                     </div>
                                     <div class=\"col-md-6\">
@@ -193,7 +187,9 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                                         </div>
                                     </div>
                                 </form>
-                            </div>
+";
+        // line 117
+        echo "                            </div>
                         </div>
 
                     </div>
@@ -211,17 +207,17 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                             </div>
                         </div>
                         <div class=\"card-body\">
-                            <p class=\"text-uppercase text-sm\">Prediction Form Enviroment</p>
+                            <p class=\"text-uppercase text-sm\">PREDICTION OF THE IMPACT OF THE COVID-19 PANDEMIC ON <strong>Health</strong></p>
                             <div class=\"row\">
                                 <form action=\"";
-        // line 131
+        // line 137
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prediction");
         echo "\" method=\"POST\">
                                     <div class=\"row\">
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
                                                 <label class=\"form-control-label\"
-                                                       for=\"Physicians2018\">Physicians </label>
+                                                       for=\"Physicians2018\">Number of Physicians :</label>
                                                 <input type=\"text\" class=\"form-control\" name=\"Physicians2018\"
                                                        id=\"Physicians2018\" required><br>
                                             </div>
@@ -239,8 +235,8 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
                                                 <label class=\"form-control-label\"
-                                                       for=\"PrevalenceofHIVmale(ages15-24)2019\">Prevalence of HIV
-                                                    male</label>
+                                                       for=\"PrevalenceofHIVmale(ages15-24)2019\">Number of  HIV
+                                                    male : </label>
                                                 <input class=\"form-control\" type=\"text\"
                                                        name=\"PrevalenceofHIVmale(ages15-24)2019\"
                                                        id=\"PrevalenceofHIVmale(ages15-24)2019\" required><br>
@@ -249,7 +245,7 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
                                                 <label class=\"form-control-label\"
-                                                       for=\"CausedeathbyCommunicablediseases2019\">Cause death by
+                                                       for=\"CausedeathbyCommunicablediseases2019\">Number of deaths by
                                                     Communicable diseases</label>
                                                 <input class=\"form-control\" type=\"text\"
                                                        name=\"CausedeathbyCommunicablediseases2019\"
@@ -260,8 +256,8 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                                     <div class=\"col-md-6\">
                                         <div class=\"form-group\">
                                             <label class=\"form-control-label\"
-                                                   for=\"CausedeathbynonCommunicablediseases2019\">Cause death by non
-                                                Communicable diseases</label>
+                                                   for=\"CausedeathbynonCommunicablediseases2019\">Number of deaths by no
+                                                Communicable diseases :</label>
                                             <input class=\"form-control\" type=\"text\"
                                                    name=\"CausedeathbynonCommunicablediseases2019\"
                                                    id=\"CausedeathbynonCommunicablediseases2019\" required><br>
@@ -287,9 +283,9 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
 
         </div>
         ";
-        // line 201
-        $this->loadTemplate("shared/_footerAdmin.html.twig", "prediction/index.html.twig", 201)->display($context);
-        // line 202
+        // line 207
+        $this->loadTemplate("shared/_footerAdmin.html.twig", "prediction/index.html.twig", 207)->display($context);
+        // line 208
         echo "    </main>
 
 ";
@@ -310,7 +306,7 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
 
     public function getDebugInfo()
     {
-        return array (  293 => 202,  291 => 201,  218 => 131,  138 => 54,  113 => 31,  109 => 29,  105 => 27,  102 => 26,  100 => 25,  93 => 21,  79 => 9,  77 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  289 => 208,  287 => 207,  214 => 137,  192 => 117,  136 => 52,  111 => 29,  107 => 27,  103 => 25,  100 => 24,  98 => 23,  91 => 19,  79 => 9,  77 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -328,8 +324,6 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                 <div class=\"row gx-4\">
                     <div class=\"col-auto\">
                         <div class=\"avatar avatar-xl position-relative\">
-                            <img src=\"../assets/img/team-1.jpg\" alt=\"profile_image\"
-                                 class=\"w-100 border-radius-lg shadow-sm\">
                         </div>
                     </div>
                     <div class=\"col-auto my-auto\">
@@ -366,24 +360,23 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                             </div>
                         </div>
                         <div class=\"card-body\">
-                            <p class=\"text-uppercase text-sm\">Prediction Form</p>
+                                <p class=\"text-uppercase text-sm\">Prediction of the impact of the COVID-19 pandemic on <strong>Environment</strong></p>
                             <div class=\"row\">
-                                <form action=\"{{ path('prediction') }}\" method=\"POST\">
+                                <form action=\"{{ path('predictEnvironement') }}\" method=\"POST\">
                                     <div class=\"row\">
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
                                                 <label class=\"form-control-label\"
-                                                       for=\"Physicians2018\">Physicians </label>
-                                                <input type=\"text\" class=\"form-control\" name=\"Physicians2018\"
-                                                       id=\"Physicians2018\" required><br>
+                                                       for=\"Renewableenergyconsumptionoftotalfinalenergyconsumption2018\">Renewable energy consumption  % of total final energy consumption 2018 :</label>
+                                                <input type=\"text\" class=\"form-control\" name=\"Renewableenergyconsumptionoftotalfinalenergyconsumption2018\"
+                                                       id=\"Renewableenergyconsumptionoftotalfinalenergyconsumption2018\" required><br>
                                             </div>
                                         </div>
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
-                                                <label class=\"form-control-label\" for=\"Numberofdeaths\">Number of
-                                                    deaths:</label>
-                                                <input type=\"text\" class=\"form-control\" name=\"Numberofdeaths\"
-                                                       id=\"Numberofdeaths\" required><br>
+                                                <label class=\"form-control-label\" for=\"Renewableenergyconsumption2019\">Renewable energy consumption  2019:</label>
+                                                <input type=\"text\" class=\"form-control\" name=\"Renewableenergyconsumption2019\"
+                                                       id=\"Renewableenergyconsumption2019\" required><br>
                                             </div>
                                         </div>
                                     </div>
@@ -391,32 +384,29 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
                                                 <label class=\"form-control-label\"
-                                                       for=\"PrevalenceofHIVmale(ages15-24)2019\">Prevalence of HIV
-                                                    male</label>
+                                                       for=\"Renewableelectricityoutput2020\">Renewable electricity output 2020 :</label>
                                                 <input class=\"form-control\" type=\"text\"
-                                                       name=\"PrevalenceofHIVmale(ages15-24)2019\"
-                                                       id=\"PrevalenceofHIVmale(ages15-24)2019\" required><br>
+                                                       name=\"Renewableelectricityoutput2020\"
+                                                       id=\"Renewableelectricityoutput2020\" required><br>
                                             </div>
                                         </div>
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
                                                 <label class=\"form-control-label\"
-                                                       for=\"CausedeathbyCommunicablediseases2019\">Cause death by
-                                                    Communicable diseases</label>
+                                                       for=\"CO2Emissions(Thousandmetrictons)2019\">CO2 Emissions (Thousand metric tons) 2019 :</label>
                                                 <input class=\"form-control\" type=\"text\"
-                                                       name=\"CausedeathbyCommunicablediseases2019\"
-                                                       id=\"CausedeathbyCommunicablediseases2019\" required><br>
+                                                       name=\"CO2Emissions(Thousandmetrictons)2019\"
+                                                       id=\"CO2Emissions(Thousandmetrictons)2019\" required><br>
                                             </div>
                                         </div>
                                     </div>
                                     <div class=\"col-md-6\">
                                         <div class=\"form-group\">
                                             <label class=\"form-control-label\"
-                                                   for=\"CausedeathbynonCommunicablediseases2019\">Cause death by non
-                                                Communicable diseases</label>
+                                                   for=\"CO2Emissions(Thousandmetrictons)2020\">CO2 Emissions (Thousand metric tons) 2020 :</label>
                                             <input class=\"form-control\" type=\"text\"
-                                                   name=\"CausedeathbynonCommunicablediseases2019\"
-                                                   id=\"CausedeathbynonCommunicablediseases2019\" required><br>
+                                                   name=\"CO2Emissions(Thousandmetrictons)2020\"
+                                                   id=\"CO2Emissions(Thousandmetrictons)2020\" required><br>
                                         </div>
                                     </div>
                                     <div class=\"col-md-6\">
@@ -425,6 +415,18 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                                         </div>
                                     </div>
                                 </form>
+{#                                <ul>#}
+{#                                    {% for prediction in predictions %}#}
+{#                                        {% set p=prediction %}#}
+{#                                        {% if p==0 %}#}
+{#                                            <li>low</li>#}
+{#                                        {% elseif p==1 %}#}
+{#                                            <li>mean</li>#}
+{#                                        {% else %}#}
+{#                                            <li>High</li>#}
+{#                                        {% endif %}#}
+{#                                    {% endfor %}#}
+{#                                </ul>#}
                             </div>
                         </div>
 
@@ -443,14 +445,14 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                             </div>
                         </div>
                         <div class=\"card-body\">
-                            <p class=\"text-uppercase text-sm\">Prediction Form Enviroment</p>
+                            <p class=\"text-uppercase text-sm\">PREDICTION OF THE IMPACT OF THE COVID-19 PANDEMIC ON <strong>Health</strong></p>
                             <div class=\"row\">
                                 <form action=\"{{ path('prediction') }}\" method=\"POST\">
                                     <div class=\"row\">
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
                                                 <label class=\"form-control-label\"
-                                                       for=\"Physicians2018\">Physicians </label>
+                                                       for=\"Physicians2018\">Number of Physicians :</label>
                                                 <input type=\"text\" class=\"form-control\" name=\"Physicians2018\"
                                                        id=\"Physicians2018\" required><br>
                                             </div>
@@ -468,8 +470,8 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
                                                 <label class=\"form-control-label\"
-                                                       for=\"PrevalenceofHIVmale(ages15-24)2019\">Prevalence of HIV
-                                                    male</label>
+                                                       for=\"PrevalenceofHIVmale(ages15-24)2019\">Number of  HIV
+                                                    male : </label>
                                                 <input class=\"form-control\" type=\"text\"
                                                        name=\"PrevalenceofHIVmale(ages15-24)2019\"
                                                        id=\"PrevalenceofHIVmale(ages15-24)2019\" required><br>
@@ -478,7 +480,7 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                                         <div class=\"col-md-6\">
                                             <div class=\"form-group\">
                                                 <label class=\"form-control-label\"
-                                                       for=\"CausedeathbyCommunicablediseases2019\">Cause death by
+                                                       for=\"CausedeathbyCommunicablediseases2019\">Number of deaths by
                                                     Communicable diseases</label>
                                                 <input class=\"form-control\" type=\"text\"
                                                        name=\"CausedeathbyCommunicablediseases2019\"
@@ -489,8 +491,8 @@ class __TwigTemplate_00139b72571eab7431c8258f8b8c5368333d395ddfc261480e9b33a161c
                                     <div class=\"col-md-6\">
                                         <div class=\"form-group\">
                                             <label class=\"form-control-label\"
-                                                   for=\"CausedeathbynonCommunicablediseases2019\">Cause death by non
-                                                Communicable diseases</label>
+                                                   for=\"CausedeathbynonCommunicablediseases2019\">Number of deaths by no
+                                                Communicable diseases :</label>
                                             <input class=\"form-control\" type=\"text\"
                                                    name=\"CausedeathbynonCommunicablediseases2019\"
                                                    id=\"CausedeathbynonCommunicablediseases2019\" required><br>

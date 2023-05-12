@@ -79,8 +79,26 @@ class PredictionController extends AbstractController
         $predictions = $flaskIntegrationService->executeFlaskAPI($data);
 
         // Process the predictions and return a response
-
         return $this->render('prediction/result.html.twig', ['predictions' => $predictions]);
+    }
+    /**
+     * @Route("/predictEnvironement", name="predictEnvironement", methods={"GET", "POST"})
+     */
+    public function index2(Request $request,FlaskIntegrationService $flaskIntegrationService): Response
+    {
+        $data = [
+            'Renewable energy consumption  % of total final energy consumption 2018' => $request->request->get('Renewableenergyconsumptionoftotalfinalenergyconsumption2018'),
+            'Renewable energy consumption  2019' => $request->request->get('Renewableenergyconsumption2019'),
+            'Renewable electricity output 2020' =>$request->request->get('Renewableelectricityoutput2020'),
+            'CO2 Emissions (Thousand metric tons) 2019' => $request->request->get('CO2Emissions(Thousandmetrictons)2019'),
+            'CO2 Emissions (Thousand metric tons) 2020' => $request->request->get('CO2Emissions(Thousandmetrictons)2020')
+            // Add more data fields as required
+        ];
+
+        $predictions2 = $flaskIntegrationService->executeFlaskAPIEnvironement($data);
+
+        // Process the predictions and return a response
+        return $this->render('prediction/result2.html.twig', ['predictions2' => $predictions2]);
     }
 
 }
